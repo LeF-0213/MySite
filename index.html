@@ -9,9 +9,11 @@
     <title>LeF&#39;s Website</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script
-      src="https://kit.fontawesome.com/133260cff9.js"
+      src="https://kit.fontawesome.com/a6dda925a0.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/projects.js" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -20,6 +22,7 @@
         <img class="header__logo__img" src="./images/LeF-01.ico" alt="logo" />
         <h1 class="header__logo__title"><a href="#">LeF</a></h1>
       </div>
+
       <nav class="header__nav">
         <ul class="header__menu">
           <li><a href="#home" class="header__menu__item active">홈으로</a></li>
@@ -30,18 +33,30 @@
           <li><a href="#contact" class="header__menu__item">연락처</a></li>
         </ul>
       </nav>
+
+      <button class="header__toggle">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <button class="header__theme"></button>
     </header>
     <!-- Main -->
     <main>
       <!-- Home -->
       <section id="home">
-        <img class="home__avatar" src="./images/LeF-01.png" alt="프로필 사진" />
-        <h2 class="home__title">
-          안녕하세요! <br />
-          <strong class="home__title--strong">LeF</strong> 입니다.
-        </h2>
-        <p class="home__description">우주에서 가장 뛰어난 AI 개발자입니다.</p>
-        <a class="home__contact" href="#contact">연락처</a>
+        <div class="home__container">
+          <img
+            class="home__avatar"
+            src="./images/LeF-01.png"
+            alt="프로필 사진"
+          />
+          <h2 class="home__title">
+            안녕하세요! <br />
+            <strong class="home__title--strong">LeF</strong> 입니다.
+          </h2>
+          <p class="home__description">우주에서 가장 뛰어난 AI 개발자입니다.</p>
+          <a class="home__contact" href="#contact">연락처</a>
+        </div>
       </section>
 
       <!-- About -->
@@ -77,14 +92,14 @@
           <li class="job">
             <img src="./images/img1.png" alt="img1 fhrh" />
             <div>
-              <p class="job__name">SK M&C 플랫폼 엔지니아</p>
+              <p class="job__name">META 시스템 엔지니아</p>
               <p class="job__period">20XX ~ 20XX</p>
             </div>
           </li>
           <li class="job">
             <img src="./images/img2.png" alt="img2 fhrh" />
             <div>
-              <p class="job__name">엔씨소프트 시스템 엔지니아</p>
+              <p class="job__name">NVIDIA 플랫폼 엔지니아</p>
               <p class="job__period">20XX ~ 20XX</p>
             </div>
           </li>
@@ -179,28 +194,28 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">
+              <button class="category category--selected" data-category="all">
                 ALL<span class="category__count">10</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="front-end">
                 Front-end<span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
-                Mobile<span class="category__count">5</span>
+              <button class="category" data-category="mobile">
+                Mobile<span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
-                Back-end<span class="category__count">2</span>
+              <button class="category" data-category="back-end">
+                Back-end<span class="category__count">4</span>
               </button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -213,7 +228,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -226,7 +241,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -239,7 +254,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -252,7 +267,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -265,7 +280,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -278,7 +293,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -291,7 +306,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -304,7 +319,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -317,7 +332,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/img3.png"
@@ -399,12 +414,13 @@
             ></a>
           </li>
           <li>
-            <a
-              class="contact__link"
-              href="https://github.com/LeF-0213/MySite"
-              target="_blank"
-              title="깃허브"
-              ><i class="fa-brands fa-github"></i
+            <a class="contact__link" href="" target="_blank" title="이메일"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a class="contact__link" href="" target="_blank" title="전화번호"
+              ><i class="fa-solid fa-phone"></i
             ></a>
           </li>
         </ul>
