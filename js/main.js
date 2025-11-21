@@ -51,11 +51,6 @@ if (savedTheme === "light") {
   themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
-if (savedTheme === "dark") {
-  html.classList.add("dark-theme");
-  themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-}
-
 themeToggle.addEventListener("click", () => {
   const isLight = html.classList.toggle("light-theme");
   themeToggle.innerHTML = isLight
