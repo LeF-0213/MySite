@@ -42,9 +42,14 @@ navbarMenu.addEventListener("click", () => {
 // 테마 토글 기능
 const html = document.documentElement;
 const themeToggle = document.querySelector(".header__theme");
-const lightTheme = window.matchMedia("(prefers-color-scheme: light)");
+const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 const savedTheme =
-  localStorage.getItem("theme") || (lightTheme.matches ? "light" : "dark");
+  localStorage.getItem("theme") || (darkTheme.matches ? "dark" : "light");
+
+if (savedTheme === "light") {
+  html.classList.add("light-theme");
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
 
 if (savedTheme === "dark") {
   html.classList.add("dark-theme");
@@ -52,9 +57,9 @@ if (savedTheme === "dark") {
 }
 
 themeToggle.addEventListener("click", () => {
-  const isDark = html.classList.toggle("dark-theme");
-  themeToggle.innerHTML = isDark
-    ? '<i class="fas fa-moon"></i>'
-    : '<i class="fas fa-sun"></i>';
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  const isLight = html.classList.toggle("light-theme");
+  themeToggle.innerHTML = isLight
+    ? '<i class="fas fa-sun"></i>'
+    : '<i class="fas fa-moon"></i>';
+  localStorage.setItem("theme", isLight ? "light" : "dark");
 });
