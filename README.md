@@ -10,7 +10,14 @@
 
 Dark와 Light 두 가지 테마를 지원하며, 클릭과 스크롤 시 다양한 인터랙티브 효과를 경험할 수 있습니다.
 
-![Theme Switch Demo](./assets/videos/theme-switch.mp4)
+<video src="./assets/videos/theme-switch.mp4" 
+       loop 
+       muted 
+       autoplay 
+       playsinline 
+       width="100%">
+  Your browser does not support the video tag.
+</video>
 
 ## ✨ 주요 기능
 
